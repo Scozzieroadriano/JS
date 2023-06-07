@@ -70,13 +70,26 @@ function validarUsuario() {
   };
 };
 
+function contarLetras(cadena) {
+  let contador = 0;
+
+  for (let i = 0; i < cadena.length; i++) {
+    if (isNaN(cadena[i])) {
+      contador++;
+    }
+  }
+
+  return contador;
+}
+
+
 function opciones(userName) {
 
   console.log(userName);
   let opcion = 0;
-  while (opcion !== 4) {
+  while (opcion !== 5) {
 
-    opcion = parseInt(prompt("Elija una de las opciones siguientes para continuar: \n 1 - Saludo \n 2 - Conocer Fecha \n 3 - Calculadora \n 4 - Salir "));
+    opcion = parseInt(prompt("Elija una de las opciones siguientes para continuar: \n 1 - Saludo \n 2 - Conocer Fecha \n 3 - Calculadora \n 4 - Contador de letras \n 5 - Salir "));
 
     switch (opcion) {
       case 1:
@@ -96,7 +109,7 @@ function opciones(userName) {
           alert('SERA REDIRIGDO AL MENU ANTERIOR');
         }
         break;
-      case 4:
+      case 5:
         window.close();
         alert("Cierre de sesión exitoso. Vuelva pronto");
         break;
