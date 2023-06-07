@@ -22,3 +22,5 @@ Opcion 1, 2 y 4 son simples: saludar, mostrar fecha-hora y salir
 
 La opcion 3: calculadora, llama a otra funcion donde nuevamente se abre un menu para elegir que tipo de operacion hacer y luego de
 validar los valores ingresados muestra el resultado
+
+ABRIR DESDE HTML PARA VER MAS INSTRUCCIONES
