@@ -74,12 +74,12 @@ function contarLetras(cadena) {
   let contador = 0;
 
   for (let i = 0; i < cadena.length; i++) {
-    if (isNaN(cadena[i])) {
+    
       contador++;
-    }
+    
   }
 
-  return contador;
+  alert("Su frase tiene " + contador + " caracteres");
 }
 
 
@@ -109,6 +109,9 @@ function opciones(userName) {
           alert('SERA REDIRIGDO AL MENU ANTERIOR');
         }
         break;
+      case 4:
+        contarLetras(prompt("Ingresa una frase"));
+        break;  
       case 5:
         window.close();
         alert("Cierre de sesión exitoso. Vuelva pronto");
