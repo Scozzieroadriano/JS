@@ -22,3 +22,44 @@ header{
     background-color: gold;
     padding: 10px;
 }
+
+/*
+function calculadora() {
+  let operacion = parseInt(prompt("Que operacion desea realizar? \n 1-SUMA \n 2-RESTA \n 3-MULTIPLICACION \n 4-DIVISION "));
+
+  while (operacion < 1 || operacion > 4) {
+    alert("Ingrese una opción valida");
+    operacion = parseInt(prompt("Que operacion desea realizar? \n 1-SUMA \n 2-RESTA \n 3-MULTIPLICACION \n 4-DIVISION "));
+  };
+
+  let primerNum = prompt("Ingrese un número:");
+  let segundoNum = prompt("Ingrese otro número:");
+  let resultado = 0;
+  const validacion = /^\d+$/;
+
+  while (!validacion.test(primerNum) || !validacion.test(segundoNum)) {
+    alert("Ingresá un numero válido");
+    primerNum = prompt("Ingrese un número:");
+    segundoNum = prompt("Ingrese otro número:");
+  };
+
+  let numParseado = parseFloat(primerNum);
+  let segNumParseado = parseFloat(segundoNum);
+
+  if (operacion === 1) {
+    resultado = numParseado + segNumParseado;
+    alert("EL RESULTADO DE LA SUMA ES: " + resultado);
+  } else if (operacion === 2) {
+    resultado = numParseado - segNumParseado;
+    alert("EL RESULTADO DE LA RESTA ES: " + resultado);
+  } else if (operacion === 3) {
+    resultado = numParseado * segNumParseado;
+    alert("EL RESULTADO DE LA MULTIPLICACION ES: " + resultado);
+  } else if (operacion === 4) {
+    resultado = numParseado / segNumParseado;
+    alert("EL RESULTADO DE LA DIVISION ES: " + resultado);
+  } 
+
+  alert("VOLVERÁ AL MENU ANTERIOR");
+};
+*/

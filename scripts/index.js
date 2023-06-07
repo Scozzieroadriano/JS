@@ -5,43 +5,46 @@ let userPass = "";
 alert("Bienvenido !\n" + "¡Hoy es un gran día para programar!");
 
 function calculadora() {
-  let operacion = parseInt(prompt("Que operacion desea realizar? \n 1-SUMA \n 2-RESTA \n 3-MULTIPLICACION \n 4-DIVISION "));
+  let operacion = 0;
 
-  while (operacion <= 1 || operacion >= 4) {
-    alert("Ingrese una opción valida");
-    operacion = parseInt(prompt("Que operacion desea realizar? \n 1-SUMA \n 2-RESTA \n 3-MULTIPLICACION \n 4-DIVISION "));
-  };
+  while (operacion !== 5) {
+    operacion = parseInt(prompt("¿Qué operación desea realizar? \n 1-SUMA \n 2-RESTA \n 3-MULTIPLICACION \n 4-DIVISION \n 5-SALIR"));
 
-  let primerNum = prompt("Ingrese un número:");
-  let segundoNum = prompt("Ingrese otro número:");
-  let resultado = 0;
-  const validacion = /^\d+$/;
+    if (operacion >= 1 && operacion <= 4) {
+      let primerNum = prompt("Ingrese un número:");
+      let segundoNum = prompt("Ingrese otro número:");
+      const validacion = /^\d+$/;
 
-  while (!validacion.test(primerNum) || !validacion.test(segundoNum)) {
-    alert("Ingresá un numero válido");
-    primerNum = prompt("Ingrese un número:");
-    segundoNum = prompt("Ingrese otro número:");
-  };
+      while (!validacion.test(primerNum) || !validacion.test(segundoNum)) {
+        alert("Ingresá un número válido");
+        primerNum = prompt("Ingrese un número:");
+        segundoNum = prompt("Ingrese otro número:");
+      }
 
-  let numParseado = parseFloat(primerNum);
-  let segNumParseado = parseFloat(segundoNum);
+      let numParseado = parseFloat(primerNum);
+      let segNumParseado = parseFloat(segundoNum);
+      let resultado = 0;
 
-  if (operacion === 1) {
-    resultado = numParseado + segNumParseado;
-    alert("EL RESULTADO DE LA SUMA ES: " + resultado);
-  } else if (operacion === 2) {
-    resultado = numParseado - segNumParseado;
-    alert("EL RESULTADO DE LA RESTA ES: " + resultado);
-  } else if (operacion === 3) {
-    resultado = numParseado * segNumParseado;
-    alert("EL RESULTADO DE LA MULTIPLICACION ES: " + resultado);
-  } else if (operacion === 4) {
-    resultado = numParseado / segNumParseado;
-    alert("EL RESULTADO DE LA DIVISION ES: " + resultado);
-  };
+      if (operacion === 1) {
+        resultado = numParseado + segNumParseado;
+        alert("EL RESULTADO DE LA SUMA ES: " + resultado);
+      } else if (operacion === 2) {
+        resultado = numParseado - segNumParseado;
+        alert("EL RESULTADO DE LA RESTA ES: " + resultado);
+      } else if (operacion === 3) {
+        resultado = numParseado * segNumParseado;
+        alert("EL RESULTADO DE LA MULTIPLICACION ES: " + resultado);
+      } else if (operacion === 4) {
+        resultado = numParseado / segNumParseado;
+        alert("EL RESULTADO DE LA DIVISION ES: " + resultado);
+      }
+    } else if (operacion !== 5) {
+      alert("Ingrese una opción válida");
+    }
+  }
 
-  alert("VOLVERÁ AL MENU PRINCIPAL");
-};
+  alert("Calculadora finalizada. Hasta luego.");
+}
 
 function validarUsuario() {
   while (true) {
@@ -98,7 +101,7 @@ function opciones(userName) {
         alert("Cierre de sesión exitoso. Vuelva pronto");
         break;
       default:
-        console.log("Opción no válida");
+        alert("Opción no válida");
     };
   };
 };
