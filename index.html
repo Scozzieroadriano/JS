@@ -4,16 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
     <title>Funciones, Ciclos y Bucles JS</title>
 </head>
 <body>
-    Proyecto en JS
-    Es un login de usuario donde al aceptar tiene distintas funciones para realizar
-    * Calculadora
-    * Saludo
-    * Fecha y Hora
-    * Salir
 
-    <script src="./scripts/index.js"></script>
+    <header>PRE-ENTREGA 1: Funciones, Ciclos y Bucles JS</header>
+    <main>
+        <div class="descripcion">
+            La funcion de este proyecto es practicar todos los conceptos vistos hasta el momento.
+            <br>
+            <br>
+            <span>Comienza con una funcion de logeo donde el usuario es: <strong>Adriano</strong>  y la contraseña es: <strong>Coder</strong></span><br><br>
+            <p>Una vez realizada la validacion del usuario se abre un menu donde podes elegir entre estas opciones:</p>
+            <br>
+            * Calculadora
+            <br>
+            * Saludo
+            <br>
+            * Fecha y Hora
+            <br>
+            * Salir
+        </div>
+
+        <div class="explicacion">
+            <h4>Explicacion</h4>
+            <p>Comienzo validando dentro de un bucle while, si los valores ingresados son null, en caso de que alguno sea null el bucle se repite y vuelve a pedir usuario y contraseña.</p>
+            <p>De lo contrario si se ingresa el usuario correcto el bucle se interrumpe y el programa continua hacia otro bucle que es un menu.</p>
+            <p>En este bucle solo se pueden ingresar valores entre 1 y 4 para obtener una respuesta, de lo contrario el bucle vuelve a iniciar.</p>
+            <br>
+            <p>Opcion 1, 2 y 4 son simples: saludar, mostrar fecha-hora y salir</p>
+            <p>La opcion 3: calculadora, llama a otra funcion donde nuevamente se abre un menu para elegir que tipo de operacion hacer y luego de validar los valores ingresados muestra el resultado</p>
+        </div>
+      
+    </main>
+    <footer></footer>
+<script src="./scripts/index.js" defer></script>   
 </body>
 </html>
